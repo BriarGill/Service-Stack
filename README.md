@@ -1,47 +1,35 @@
 # Service-Stack — Car Maintenance Dashboard
 
-Overview
-This repository contains the code and prototypes for the Car Maintenance Dashboard (owner: BriarGill). The goal is an interactive dashboard for car owners to track maintenance, inspections, service history, reminders, and a parts inventory.
+Short description
+An interactive dashboard for car owners to track maintenance, service history, reminders, inspections, and parts inventory. This repo is the canonical code + prototypes for the project (owner: BriarGill).
 
-Getting started (local)
-1. Clone repo:
+Quick start (frontend prototype)
+1. Clone:
    git clone git@github.com:BriarGill/Service-Stack.git
    cd Service-Stack
 
-2. Install (frontend example):
-   cd frontend
-   pnpm install   # or npm/yarn
-
-3. Run dev server:
-   pnpm dev        # or npm run dev
-
-Branch strategy
-- main (protected)
-- develop
-- feature/<name>
-- prototype/cursor — for Cursor-driven prototyping (ephemeral)
-
-Cursor prototyping flow
-1. Sign in to Cursor and connect to GitHub.
-2. Open the repository and switch to the prototype/cursor branch:
+2. Create a prototype branch:
    git checkout -b prototype/cursor
-3. Run the dev server inside the Cursor workspace (npm run dev).
-4. Implement UI from Figma screens and commit regularly.
-5. Push branch and open a PR when ready.
 
-Figma
-- Figma file: <ADD YOUR FIGMA LINK HERE>
-- Export icons and images into frontend/public/assets
-- Keep a design tokens page in the Figma file (colors, spacing, font sizes).
+3. (Optional) If using the Next.js scaffold in /frontend:
+   cd frontend
+   npm install
+   npm run dev
 
-CI / Deployment
-- CI is set up in .github/workflows/ci.yml
-- Preview deployments: connect to Vercel or Netlify (create preview deployments per PR)
+Design & Cursor
+- Figma file: ADD_YOUR_FIGMA_LINK_HERE
+- Cursor: sign in, connect GitHub, open repository and prototype/cursor branch to start editing and previewing.
 
-Useful commands
-- Create prototype branch: git checkout -b prototype/cursor
-- Commit & push: git add . && git commit -m "proto: ..." && git push -u origin prototype/cursor
+Repository layout (suggested)
+- frontend/         # Next.js + TypeScript + Tailwind app
+- backend/          # API or supabase config
+- design/           # Figma links, exported assets
+- prototypes/cursor # notes & Cursor artifacts
+- .github/          # workflows, issue and PR templates
 
-Contact / ownership
-- Owner: BriarGill
-- Repo: github.com/BriarGill/Service-Stack
+Contributing
+- Create feature branches from prototype/cursor or develop.
+- Open PRs and request review via CODEOWNERS.
+
+Contact
+- Owner: github.com/BriarGill
